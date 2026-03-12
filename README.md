@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rati Madhikarmi — Portfolio Website
+
+A world-class portfolio website built with Next.js 14, featuring dark luxury editorial design, cinematic animations, and premium interactions.
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS + Custom CSS
+- **Animation:** Framer Motion
+- **Fonts:** Cormorant Garamond · DM Sans · Bebas Neue (via next/font)
+- **Icons:** Lucide React
+- **Effects:** Canvas particle system, canvas-confetti (Easter egg)
+- **Cursor:** Custom magnetic dual-layer cursor (desktop)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Photo Replacement Guide
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Hero Photo
+1. Place your professional portrait photo at: `/public/images/profile.jpg`
+2. **Recommended dimensions:** 600×750px (portrait orientation)
+3. The photo will automatically receive the asymmetric clip-path treatment
+4. Until a real photo is provided, a gold gradient placeholder with "RM" initials is displayed
 
-## Learn More
+## Easter Egg
 
-To learn more about Next.js, take a look at the following resources:
+Press the Konami code: **↑ ↑ ↓ ↓ ← → ← → B A** to trigger gold confetti.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Optimized for Vercel:
+```bash
+npm run build
+npx vercel
+```
 
-## Deploy on Vercel
+## Accessibility
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Respects `prefers-reduced-motion` — all animations disabled
+- Custom cursor hidden on touch devices
+- Particles disabled on mobile for performance
+- Semantic HTML throughout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 Rati Madhikarmi. All rights reserved.
