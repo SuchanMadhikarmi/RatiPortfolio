@@ -121,7 +121,7 @@ export default function ContactSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <h2 className="font-display text-[38px] sm:text-[48px] md:text-[72px] font-light leading-[1.05] mb-6">
+          <h2 className="font-display text-[36px] sm:text-[44px] md:text-[66px] font-light leading-[1.05] mb-6">
             Let&apos;s Build Something
             <br />
             <span className="italic text-[var(--color-gold)]">Remarkable.</span>

@@ -47,7 +47,7 @@ export default function CompanySection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             Where I Lead
           </p>
-          <h2 className="font-display text-[36px] sm:text-[42px] md:text-[56px] font-normal leading-[1.1] mb-4">
+          <h2 className="font-display text-[34px] sm:text-[40px] md:text-[52px] font-normal leading-[1.1] mb-4">
             Real Dreams Educational Consultancy
           </h2>
           <p className="font-display text-lg sm:text-xl md:text-2xl italic text-[var(--color-gold)]">

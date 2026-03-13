@@ -64,7 +64,7 @@ export default function ExperienceSection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             Career
           </p>
-          <h2 className="font-display text-[42px] md:text-[56px] font-normal leading-[1.1]">
+          <h2 className="font-display text-[38px] md:text-[52px] font-normal leading-[1.1]">
             Professional{" "}
             <span className="italic text-[var(--color-gold)]">Experience</span>
           </h2>

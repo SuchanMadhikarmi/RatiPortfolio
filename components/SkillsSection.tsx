@@ -67,7 +67,7 @@ export default function SkillsSection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             Expertise
           </p>
-          <h2 className="font-display text-[42px] md:text-[56px] font-normal leading-[1.1]">
+          <h2 className="font-display text-[38px] md:text-[52px] font-normal leading-[1.1]">
             Skills &{" "}
             <span className="italic text-[var(--color-gold)]">Capabilities</span>
           </h2>

@@ -59,7 +59,7 @@ export default function AboutSection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             About
           </p>
-          <h2 className="font-display text-[36px] sm:text-[42px] md:text-[56px] font-normal leading-[1.1]">
+          <h2 className="font-display text-[34px] sm:text-[40px] md:text-[52px] font-normal leading-[1.1]">
             The Person Behind <br />
             <span className="italic text-[var(--color-gold)]">the Strategy</span>
           </h2>

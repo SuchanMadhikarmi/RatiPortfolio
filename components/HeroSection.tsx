@@ -23,7 +23,7 @@ export default function HeroSection() {
   const [photoLoaded, setPhotoLoaded] = useState(false);
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-start lg:items-center overflow-hidden">
       {/* Background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -33,7 +33,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-24 md:py-28 lg:py-0">
+      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-12 pt-28 sm:pt-32 md:pt-36 lg:pt-24 pb-16 sm:pb-20 lg:pb-0">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-10 md:gap-12 lg:gap-20">
           {/* LEFT COLUMN */}
           <div className="w-full lg:w-[55%]">
@@ -53,14 +53,14 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <p className="font-display text-[28px] sm:text-[34px] md:text-[40px] lg:text-[46px] leading-none tracking-[-0.01em] text-[var(--color-white)]">
+              <p className="font-display text-[26px] sm:text-[32px] md:text-[38px] lg:text-[44px] leading-none tracking-[-0.01em] text-[var(--color-white)]">
                 Rati <span className="italic text-[var(--color-gold)]">Madhikarmi</span>
               </p>
               <span className="mt-3 block h-[1px] w-24 bg-gradient-to-r from-[var(--color-gold)] to-transparent" />
             </motion.div>
 
             {/* Headline */}
-            <h1 className="font-display text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] font-light leading-[0.95] tracking-[-0.02em] mb-7 sm:mb-8">
+            <h1 className="font-display text-[42px] sm:text-[50px] md:text-[68px] lg:text-[82px] font-light leading-[0.95] tracking-[-0.02em] mb-7 sm:mb-8">
               {["Turning Global", "Dreams Into"].map((line, i) => (
                 <span key={i} className="block overflow-hidden">
                   <motion.span
