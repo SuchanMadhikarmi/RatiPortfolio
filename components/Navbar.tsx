@@ -58,7 +58,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, delay: 1.8 }}
       >
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a
             href="#"
@@ -66,7 +66,7 @@ export default function Navbar() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="magnetic font-display text-[28px] text-[var(--color-gold)] tracking-[-0.02em] transition-opacity hover:opacity-80"
+            className="magnetic font-display text-[24px] sm:text-[28px] text-[var(--color-gold)] tracking-[-0.02em] transition-opacity hover:opacity-80"
           >
             RM
           </a>
@@ -127,12 +127,12 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-7 px-6 text-center">
               {navLinks.map((link, i) => (
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="font-display text-4xl text-[var(--color-white)] hover:text-[var(--color-gold)] transition-colors"
+                  className="font-display text-3xl sm:text-4xl text-[var(--color-white)] hover:text-[var(--color-gold)] transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 30 }}

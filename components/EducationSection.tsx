@@ -39,8 +39,8 @@ const languages = [
 
 export default function EducationSection() {
   return (
-    <section id="education" className="relative py-32">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section id="education" className="relative py-20 md:py-28 lg:py-32">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Section header */}
         <motion.div
           className="mb-20"
@@ -52,7 +52,7 @@ export default function EducationSection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             Education
           </p>
-          <h2 className="font-display text-[42px] md:text-[56px] font-normal leading-[1.1]">
+          <h2 className="font-display text-[36px] sm:text-[42px] md:text-[56px] font-normal leading-[1.1]">
             Academic{" "}
             <span className="italic text-[var(--color-gold)]">Foundation</span>
           </h2>
@@ -63,7 +63,7 @@ export default function EducationSection() {
           {education.map((edu, i) => (
             <motion.div
               key={edu.degree}
-              className={`group relative overflow-hidden bg-[var(--color-card)] border rounded-sharp p-8 md:p-10 transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.08)] ${
+              className={`group relative overflow-hidden bg-[var(--color-card)] border rounded-sharp p-6 sm:p-8 md:p-10 transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.08)] ${
                 edu.featured
                   ? "border-[var(--color-gold)] hover:border-[var(--color-gold-light)]"
                   : "border-[var(--color-border)] hover:border-[var(--color-gold)]"
@@ -78,24 +78,24 @@ export default function EducationSection() {
               }}
             >
               {/* Watermark degree abbreviation */}
-              <span className="absolute top-4 right-6 font-accent text-[80px] md:text-[100px] leading-none text-[var(--color-white)] opacity-[0.04] select-none pointer-events-none">
+              <span className="absolute top-4 right-4 sm:right-6 font-accent text-[64px] sm:text-[80px] md:text-[100px] leading-none text-[var(--color-white)] opacity-[0.04] select-none pointer-events-none">
                 {edu.shortDegree}
               </span>
 
               {/* Year watermark */}
-              <span className="absolute top-6 right-6 font-accent text-[32px] leading-none text-[var(--color-white)] opacity-[0.06] select-none pointer-events-none">
+              <span className="absolute top-5 right-4 sm:right-6 font-accent text-[24px] sm:text-[32px] leading-none text-[var(--color-white)] opacity-[0.06] select-none pointer-events-none">
                 {edu.years.split(" — ")[0]}
               </span>
 
               {/* Behind background degree marker */}
               {edu.featured && (
-                <span className="absolute bottom-[-10px] left-4 font-accent text-[64px] gold-gradient-text opacity-30 select-none pointer-events-none">
+                <span className="absolute bottom-[-8px] left-3 sm:left-4 font-accent text-[48px] sm:text-[64px] gold-gradient-text opacity-30 select-none pointer-events-none">
                   {edu.shortDegree}
                 </span>
               )}
 
               <div className="relative z-10">
-                <h3 className="font-display text-[22px] md:text-[26px] font-normal leading-tight mb-2">
+                <h3 className="font-display text-[20px] sm:text-[22px] md:text-[26px] font-normal leading-tight mb-2">
                   {edu.degree}
                 </h3>
                 <p className="font-body text-[14px] text-[var(--color-gold)] mb-1">
@@ -133,7 +133,7 @@ export default function EducationSection() {
             {languages.map((lang) => (
               <div
                 key={lang.name}
-                className="border border-[var(--color-border)] px-6 py-4 rounded-sharp min-w-[160px] transition-all duration-200 hover:border-[var(--color-gold)]"
+                className="border border-[var(--color-border)] px-5 sm:px-6 py-4 rounded-sharp min-w-[145px] sm:min-w-[160px] transition-all duration-200 hover:border-[var(--color-gold)]"
               >
                 <p className="font-body text-[14px] text-[var(--color-white)] font-medium mb-1">
                   {lang.name}

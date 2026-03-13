@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -14,15 +13,8 @@ import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
-
-// Lazy load heavy components
-const MagneticCursor = dynamic(() => import("@/components/MagneticCursor"), {
-  ssr: false,
-});
-const ParticleBackground = dynamic(
-  () => import("@/components/ParticleBackground"),
-  { ssr: false }
-);
+import MagneticCursor from "@/components/MagneticCursor";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const KONAMI = [
   "ArrowUp",

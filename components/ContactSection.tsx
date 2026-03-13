@@ -49,6 +49,8 @@ export default function ContactSection() {
     message: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -72,18 +74,45 @@ export default function ContactSection() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (validate()) {
+    setSubmitError("");
+
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result?.error || "Failed to send message");
+      }
+
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 4000);
       setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again."
+      );
+      setTimeout(() => setSubmitError(""), 5000);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <section id="contact" className="relative py-32 bg-[var(--color-surface)]">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section id="contact" className="relative py-20 md:py-28 lg:py-32 bg-[var(--color-surface)]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Headline */}
         <motion.div
           className="text-center mb-16"
@@ -92,7 +121,7 @@ export default function ContactSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <h2 className="font-display text-[48px] md:text-[72px] font-light leading-[1.05] mb-6">
+          <h2 className="font-display text-[38px] sm:text-[48px] md:text-[72px] font-light leading-[1.05] mb-6">
             Let&apos;s Build Something
             <br />
             <span className="italic text-[var(--color-gold)]">Remarkable.</span>
@@ -106,7 +135,7 @@ export default function ContactSection() {
 
         {/* Contact method cards */}
         <motion.div
-          className="grid md:grid-cols-3 gap-4 mb-20"
+          className="grid md:grid-cols-3 gap-4 mb-14 sm:mb-20"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -115,7 +144,7 @@ export default function ContactSection() {
           {contactMethods.map((method) => (
             <div
               key={method.label}
-              className={`glass-card p-8 text-center transition-all duration-300 hover:border-[var(--color-gold)] ${
+              className={`glass-card p-6 sm:p-8 text-center transition-all duration-300 hover:border-[var(--color-gold)] ${
                 method.copyable ? "cursor-pointer" : ""
               }`}
               onClick={method.copyable ? copyEmail : undefined}
@@ -252,9 +281,10 @@ export default function ContactSection() {
             {/* Submit */}
             <button
               type="submit"
+              disabled={isSubmitting}
               className="magnetic w-full bg-[var(--color-gold)] text-[var(--color-bg)] font-body text-[13px] uppercase tracking-[0.18em] py-5 rounded-sharp transition-all duration-300 hover:bg-[var(--color-gold-light)] font-medium"
             >
-              Send Message →
+              {isSubmitting ? "Sending..." : "Send Message →"}
             </button>
           </form>
         </motion.div>
@@ -262,16 +292,22 @@ export default function ContactSection() {
 
       {/* Toast notification */}
       <AnimatePresence>
-        {(copied || submitted) && (
+        {(copied || submitted || submitError) && (
           <motion.div
-            className="fixed bottom-6 right-6 z-[9999] bg-[var(--color-card)] border border-[var(--color-gold)] px-6 py-3 rounded-sharp shadow-lg"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] bg-[var(--color-card)] border border-[var(--color-gold)] px-4 sm:px-6 py-3 rounded-sharp shadow-lg"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
           >
-            <p className="font-body text-[13px] text-[var(--color-gold)]">
-              {copied ? "Email copied ✓" : "Message sent ✓"}
+            <p
+              className={`font-body text-[13px] ${
+                submitError ? "text-red-300" : "text-[var(--color-gold)]"
+              }`}
+            >
+              {copied
+                ? "Email copied ✓"
+                : submitError || "Message sent ✓"}
             </p>
           </motion.div>
         )}

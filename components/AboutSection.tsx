@@ -46,8 +46,8 @@ const values = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-32">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section id="about" className="relative py-20 md:py-28 lg:py-32">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Section header */}
         <motion.div
           className="mb-20"
@@ -59,7 +59,7 @@ export default function AboutSection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             About
           </p>
-          <h2 className="font-display text-[42px] md:text-[56px] font-normal leading-[1.1]">
+          <h2 className="font-display text-[36px] sm:text-[42px] md:text-[56px] font-normal leading-[1.1]">
             The Person Behind <br />
             <span className="italic text-[var(--color-gold)]">the Strategy</span>
           </h2>
@@ -76,13 +76,13 @@ export default function AboutSection() {
           >
             {/* Large quote mark */}
             <span
-              className="absolute -top-10 -left-4 font-display text-[200px] text-[var(--color-gold)] opacity-[0.06] leading-none select-none pointer-events-none"
+              className="absolute -top-6 -left-2 md:-top-10 md:-left-4 font-display text-[120px] md:text-[200px] text-[var(--color-gold)] opacity-[0.06] leading-none select-none pointer-events-none"
               aria-hidden="true"
             >
               &ldquo;
             </span>
 
-            <div className="relative space-y-6 font-body text-[17px] leading-[1.9] text-[var(--color-white)] opacity-75">
+            <div className="relative space-y-6 font-body text-[15px] sm:text-[16px] md:text-[17px] leading-[1.9] text-[var(--color-white)] opacity-75">
               <p>
                 I&apos;m Rati Madhikarmi, a Marketing Manager at Real Dreams
                 Educational Consultancy — one of Nepal and the UK&apos;s most

@@ -47,18 +47,6 @@ const experiences = [
       "Managed Facebook, Instagram, LinkedIn — content creation and scheduling for brand visibility",
     ],
   },
-  {
-    current: false,
-    title: "Server (Hospitality)",
-    company: "Moka Dining",
-    period: "Oct 2022 — June 2023",
-    location: "United Kingdom",
-    bullets: [
-      "Delivered exceptional customer service in fast-paced fine dining environment",
-      "Demonstrated interpersonal excellence and conflict resolution across diverse clientele",
-      "Assisted in training new staff to operational standards",
-    ],
-  },
 ];
 
 export default function ExperienceSection() {

@@ -50,6 +50,23 @@ npm run build
 npx vercel
 ```
 
+## Contact Form Email Setup (Resend)
+
+The contact form sends real emails via the `/api/contact` endpoint.
+
+1. Copy env template:
+```bash
+cp .env.example .env.local
+```
+2. Set values in `.env.local`:
+- `RESEND_API_KEY` = your Resend API key
+- `CONTACT_TO_EMAIL` = where inquiries should arrive
+- `CONTACT_FROM_EMAIL` = verified sender in Resend (for testing, `onboarding@resend.dev`)
+3. For Vercel, add the same variables in:
+	**Project Settings → Environment Variables**
+
+Without `RESEND_API_KEY`, form submission will fail with a clear error message.
+
 ## Accessibility
 
 - Respects `prefers-reduced-motion` — all animations disabled

@@ -34,8 +34,8 @@ const stats = [
 
 export default function CompanySection() {
   return (
-    <section className="relative py-32 bg-[var(--color-surface)]">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="relative py-20 md:py-28 lg:py-32 bg-[var(--color-surface)]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
         <motion.div
           className="mb-16"
@@ -47,17 +47,17 @@ export default function CompanySection() {
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] mb-4">
             Where I Lead
           </p>
-          <h2 className="font-display text-[42px] md:text-[56px] font-normal leading-[1.1] mb-4">
+          <h2 className="font-display text-[36px] sm:text-[42px] md:text-[56px] font-normal leading-[1.1] mb-4">
             Real Dreams Educational Consultancy
           </h2>
-          <p className="font-display text-xl md:text-2xl italic text-[var(--color-gold)]">
+          <p className="font-display text-lg sm:text-xl md:text-2xl italic text-[var(--color-gold)]">
             Nepal&apos;s #1 — Shaping Global Futures Since 2003
           </p>
         </motion.div>
 
         {/* Stats Row */}
         <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -66,15 +66,15 @@ export default function CompanySection() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="border border-[var(--color-border)] p-8 text-center rounded-sharp"
+              className="border border-[var(--color-border)] p-5 sm:p-8 text-center rounded-sharp"
             >
-              <div className="text-[48px] md:text-[64px] leading-none mb-2">
+              <div className="text-[36px] sm:text-[48px] md:text-[64px] leading-none mb-2">
                 <AnimatedCounter
                   target={stat.value}
                   suffix={stat.suffix}
                 />
               </div>
-              <p className="font-body text-[11px] uppercase tracking-[0.15em] text-[var(--color-muted)]">
+              <p className="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.12em] sm:tracking-[0.15em] text-[var(--color-muted)]">
                 {stat.label}
               </p>
             </div>
