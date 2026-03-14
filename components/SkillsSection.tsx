@@ -19,6 +19,10 @@ const skillGroups = [
       "Conversion Opt.",
       "Performance Tracking",
       "Reporting",
+      "CRM Management",
+      "Lead Generation",
+      "ROI Analysis",
+      "B2B Partnerships",
     ],
   },
   {
@@ -29,6 +33,9 @@ const skillGroups = [
       "Student Recruitment",
       "Stakeholder Mgmt",
       "Partner Relations",
+      "Due Diligence",
+      "Contract Negotiation",
+      "Market Positioning",
     ],
   },
   {
@@ -37,6 +44,9 @@ const skillGroups = [
       "Leadership",
       "Communication",
       "Problem Solving",
+      "Event Management",
+      "Staff Training",
+      "Ethical Practices",
     ],
   },
 ];

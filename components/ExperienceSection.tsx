@@ -19,9 +19,9 @@ const experiences = [
     period: "Jan 2026 — Present",
     location: "London, UK",
     bullets: [
-      "Ensuring all marketing and student recruitment comms adhere strictly to UKVI, GDPR, and international education policies",
-      "Auditing digital and print materials for accuracy, evidence, and legal compliance",
-      "Managing confidential partner data and conducting due diligence on third-party commercial agreements",
+      "Leading strategic marketing plans for student recruitment and business development while ensuring strict adherence to UKVI, GDPR, and institutional compliance frameworks",
+      "Overseeing the creation and implementation of integrated promotional campaigns across digital and print channels, domestically and internationally",
+      "Managing institutional partnerships and conducting due diligence on third-party commercial agreements to maximize recruitment and revenue growth",
     ],
   },
   {
@@ -31,9 +31,9 @@ const experiences = [
     period: "Aug 2024 — Dec 2025",
     location: "London, UK",
     bullets: [
-      "Developed compliant marketing & commercial strategies aligned with UKVI and sector regulations",
-      "Managed digital campaigns, promotional content, partnerships with agents and stakeholders",
-      "Analysed market trends and campaign performance to optimise outreach, branding, and conversion",
+      "Established and maintained strong commercial partnerships, including the negotiation and execution of contracts with agents and stakeholders",
+      "Monitored market trends, analysed performance metrics (ROI, conversion rates), and oversaw CRM systems to track campaign outcomes",
+      "Developed and disseminated promotional materials and managed online presence through official websites and social media channels",
     ],
   },
   {

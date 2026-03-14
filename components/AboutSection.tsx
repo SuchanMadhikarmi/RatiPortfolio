@@ -94,8 +94,8 @@ export default function AboutSection() {
                 With a background spanning digital campaigns, compliance
                 management, commercial strategy, and student recruitment, I
                 operate at the intersection of data-driven marketing and
-                human aspiration — helping students from Nepal and beyond
-                find their path to world-class British universities.
+                human aspiration — materializing dreams for students from Nepal and beyond
+                to find their path to world-class British universities.
               </p>
               <p>
                 Currently completing my MSc Digital Marketing with

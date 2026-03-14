@@ -94,8 +94,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.6 }}
             >
-              Bridging ambitious international students with world-class UK
-              universities. Strategic marketing with purpose.
+              Driving institutional growth and bridging ambitious international students with world-class UK universities. Strategic marketing, ethical compliance, and commercial excellence.
             </motion.p>
 
             {/* CTAs */}
